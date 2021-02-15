@@ -1,0 +1,25 @@
+{
+  "name": "wammytanks",
+  "version": "0.0.0",
+  "description": "A fun game where tanks shoot at each other",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "keywords": [
+    "tanks",
+    "diep.io",
+    "arras.io"
+  ],
+  "author": "Coder100",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.1.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
