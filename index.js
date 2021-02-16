@@ -2,6 +2,7 @@ const app = require("express")();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
+
 app.use(require("express").static(__dirname + "/public"));
 
 app.get("/", (_, res) => {
@@ -17,5 +18,6 @@ io.on("connection", socket => {
     console.log(socket.id, "disconnected");
   });
 });
+
 
 console.log("Ready on http://localhost:8080");
