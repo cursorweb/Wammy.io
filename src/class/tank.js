@@ -1,4 +1,4 @@
-export class Player {
+export class Tank {
   constructor(name, x, y, type, health) {
     this.name = name;
     this.x = x;

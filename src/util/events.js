@@ -12,16 +12,16 @@ export function initEvents() {
 
   window.addEventListener("keydown", e => {
     values.keys[e.key] = true;
-    e.preventDefault();
+    // e.preventDefault();
   }, true);
 
   window.addEventListener("keyup", e => {
     values.keys[e.key] = false;
-    e.preventDefault();
+    // e.preventDefault();
   }, true);
 
   window.onbeforeunload = () => {
-    return "Are you sure you want to quit?";
+    // return "Are you sure you want to quit?";
   };
 
   window.addEventListener("resize", () => {
