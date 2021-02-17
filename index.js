@@ -2,7 +2,6 @@ const app = require("express")();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http);
 
-
 app.use(require("express").static(__dirname + "/public"));
 
 app.get("/", (_, res) => {
@@ -16,6 +15,11 @@ io.on("connection", socket => {
 
   socket.on("disconnect", () => {
     console.log(socket.id, "disconnected");
+  });
+
+  socket.on("name", n => {
+    if (n.length > 16) return socket.disconnect();
+    socket.emit("createTank");
   });
 });
 
