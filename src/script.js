@@ -20,6 +20,8 @@ export function begin(name) {
   values.socket = socket;
   values.tanks = {};
 
+  initEvents();
+
   socket.on("connect", () => {
     socket.emit("name", name);
 
@@ -43,8 +45,6 @@ export function begin(name) {
 
       values.tanks = output;
     });
-
-    initEvents();
 
     function mainLoop() {
       draw();

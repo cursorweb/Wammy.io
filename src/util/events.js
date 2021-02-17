@@ -1,8 +1,8 @@
+import { sharpenCanvas } from "./sharpen";
 import { values } from "../global";
 
 export function initEvents() {
-  values.canvas.width = innerWidth;
-  values.canvas.height = innerHeight;
+  sharpenCanvas();
 
   values.canvas.addEventListener("mousemove", e => {
     const rect = values.canvas.getBoundingClientRect();
@@ -25,7 +25,6 @@ export function initEvents() {
   };
 
   window.addEventListener("resize", () => {
-    values.canvas.width = innerWidth;
-    values.canvas.height = innerHeight;
+    sharpenCanvas();
   });
 }
